@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhrkywrg2rmgr"]
+
+[ext_resource type="Texture2D" uid="uid://cae7lcoxsj2jp" path="res://assets/learning-project-assets/learning-project-assets/character-spritesheet.png" id="1_2d2ku"]
+[ext_resource type="Script" path="res://objects/main_character.gd" id="1_ub3y7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_euunu"]
+size = Vector2(96.5, 118)
+
+[node name="MainCharacter" type="CharacterBody2D"]
+script = ExtResource("1_ub3y7")
+
+[node name="Character-spritesheet" type="Sprite2D" parent="."]
+position = Vector2(-5, -4)
+texture = ExtResource("1_2d2ku")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.25, 7)
+shape = SubResource("RectangleShape2D_euunu")
+
+[node name="Camera2D" type="Camera2D" parent="."]
